@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gMb-tb-67G">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="n35-eP-E3X" kind="embed" id="J11-4U-gOD"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qGP-Gu-qj4">
+                                <rect key="frame" x="8" y="672" width="377" height="60"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="D58-qB-LAq" kind="embed" id="uh4-kX-Y6U"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58.778625954198468" y="7.746478873239437"/>
+        </scene>
+        <!--Mini Player-->
+        <scene sceneID="7du-MU-Ati">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Player" referencedIdentifier="Mini Player" id="D58-qB-LAq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HEN-Rx-INl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="59" y="435"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5vx-xM-yiP">
+            <objects>
+                <tabBarController id="n35-eP-E3X" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TZp-E4-EZY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="aRD-LL-n1a" kind="relationship" relationship="viewControllers" id="Klc-20-kTu"/>
+                        <segue destination="Oks-0p-dBW" kind="relationship" relationship="viewControllers" id="nTw-7O-kpG"/>
+                        <segue destination="TpQ-BD-ezb" kind="relationship" relationship="viewControllers" id="L7I-7u-pvB"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mMC-hL-kdu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008" y="8"/>
+        </scene>
+        <!--Library-->
+        <scene sceneID="RYJ-gX-e5p">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Library" id="aRD-LL-n1a" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Library" image="music.note.house.fill" catalog="system" id="XdV-g3-chh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q6S-n5-clz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1740" y="-107"/>
+        </scene>
+        <!--Wishlist-->
+        <scene sceneID="ZCt-FV-BeA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Wishlist" id="Oks-0p-dBW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Wishlist" image="checklist" catalog="system" id="BUE-cR-j78"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JTA-bk-P7r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1743" y="8"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="Lpy-1q-CGq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" id="TpQ-BD-ezb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="ID7-eM-7km"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qIK-yT-uPL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1738" y="120"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checklist" catalog="system" width="128" height="107"/>
+        <image name="music.note.house.fill" catalog="system" width="128" height="104"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
