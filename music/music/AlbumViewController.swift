@@ -9,6 +9,10 @@ class AlbumViewController: UIViewController {
     
     var album: Album?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     func configure(album: Album) {
         self.album = album
         
@@ -58,6 +62,15 @@ extension AlbumViewController: UITableViewDataSource, UITableViewDelegate {
         cell.artistLabel?.text = song.artist
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        
+        let song = album!.songs[indexPath.row]
+        let mainViewController = self.tabBarController?.parent as? MainViewController
+       
+        mainViewController?.play(song: song)
     }
 }
 

@@ -31,6 +31,10 @@ class LibraryViewController: UIViewController, UICollectionViewDataSource, UICol
                 print("Media Error: \(status)")
             }
         }
+        
+        if let mainViewController = self.tabBarController?.parent as? MainViewController {
+            mainViewController.library = self
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -101,11 +105,20 @@ class LibraryViewController: UIViewController, UICollectionViewDataSource, UICol
     }
 }
 
-struct Song {
+struct Song: Equatable {
     let id = UUID()
     let title: String
     let artist: String
+    let albumArtist: String
     let albumId: UUID
+    
+    static func ==(lhs: Song, rhs: Song) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    public var description: String {
+        return "\(title) : \(artist)"
+    }
 }
 
 struct Album {
@@ -137,7 +150,7 @@ class MusicQuery {
             var songs: [Song] = []
             
             for song in albumItems {
-                let songData = Song(title: song.title ?? "", artist: song.artist ?? "", albumId: albumId)
+                let songData = Song(title: song.title ?? "", artist: song.artist ?? "", albumArtist: song.albumArtist ?? "", albumId: albumId)
                 
                 songs.append(songData)
             }

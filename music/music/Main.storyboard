@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="MainViewController" customModule="music" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,14 +19,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="n35-eP-E3X" kind="embed" id="J11-4U-gOD"/>
+                                    <segue destination="n35-eP-E3X" kind="embed" identifier="embededTabController" id="J11-4U-gOD"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qGP-Gu-qj4">
                                 <rect key="frame" x="8" y="709" width="377" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="D58-qB-LAq" kind="embed" id="uh4-kX-Y6U"/>
+                                    <segue destination="D58-qB-LAq" kind="embed" identifier="embededMiniPlayer" id="uh4-kX-Y6U"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -98,7 +98,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="checklist" catalog="system" width="32" height="32"/>
+        <image name="checklist" catalog="system" width="128" height="107"/>
         <image name="music.note.house.fill" catalog="system" width="128" height="104"/>
     </resources>
 </document>
